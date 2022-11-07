@@ -3,40 +3,29 @@
 using namespace std;
 
 
-
-
-
-
 class car{
     private:
         int capacity    = 10;
         int top_Speed   = 40;
         int value       = 13;
     public:
-
-
-
 };
 
 class Warehouse{
     private:
         int capacity, cntCars;
     public:
-
-
+    
 /**
  * @brief parks a car in the warehouse
  * @param car to park
  */
 // your method
-
     void parking(){
 
           cout<< "Car entered the building\n";
-
     };
-
-
+    
 /**
  * @brief gets the parked car at index
  * @param index of the parked car
@@ -51,22 +40,15 @@ class Warehouse{
             cout<<"Wrong Index!\n";
         }
       }
-
-
-
 /**
  * @brief gets the number of cars in the warehouse
  * @param number of cars in the warehouse
  */
 // your method
-
         void amountCars(int Cars){
             cntCars = Cars;
         }
-
-
-
-
+    
 /**
  * @brief gets the warehouse's capacity
  * @param warehouse's capacity
@@ -76,12 +58,7 @@ class Warehouse{
         capacity = x;
         cout<<"\nCapacity of Warehouse: " << capacity <<endl;
     }
-
-
-
 };
-
-
 
 int main(){
 
