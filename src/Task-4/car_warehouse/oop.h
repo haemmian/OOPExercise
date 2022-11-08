@@ -3,12 +3,17 @@
 #include <iostream>
 #define OOP_H
 using namespace std;
-void parking();
-void leaving(int index);
-void amountCars(int Cars);
-void Warehouse_capacity(int x);
 
 
+class Warehouse{
+    private:
+        int capacity, cntCars;
+    public:
+        void parking();
+        void leaving(int index);
+        void amountCars(int Cars);
+        void Warehouse_capacity(int x);
+};
 
 class car{
     private:

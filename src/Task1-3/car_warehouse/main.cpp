@@ -1,22 +1,17 @@
-#include <QCoreApplication>
+#include <iostream>
+#include "car.h"
+#include "warehouse.h"
+using namespace std;
 
-#include <oop.h>
+int main()
+{
+    //Initialization
+    Warehouse Wh(10);
+    Car car(10,6,60);
 
-int main(){
-
-    Warehouse Wh;
-
-    //entering or leaving Warehouse
-
-    //t.parking();
-    Wh.leaving(123);
-
-    //Amount of cars in the Warehouse
-    Wh.amountCars(9);
-
-    //capacity warehouse
-    Wh.Warehouse_capacity(10);
+    //actions
+    Wh.parking(123);    //Enter Index
+    Wh.leaving(123);    //Enter Index
 
     return 0;
 }
-
