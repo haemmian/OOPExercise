@@ -4,7 +4,7 @@
 
 class Warehouse{
 private:
-    int capacity, index;
+    int capacity, index, cnt_Car = 0;
 public:
     Warehouse(int cp){
         capacity = cp;
@@ -13,6 +13,9 @@ public:
     }
     void parking(int idxIN);
     void leaving(int idxOUT);
+    int numbCars();
+    int Capacity();
+
 };
 
 
