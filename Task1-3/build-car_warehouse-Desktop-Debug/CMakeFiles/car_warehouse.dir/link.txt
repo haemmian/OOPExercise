@@ -1,1 +1,0 @@
-/usr/lib/ccache/g++ -DQT_QML_DEBUG -g CMakeFiles/car_warehouse.dir/car_warehouse_autogen/mocs_compilation.cpp.o CMakeFiles/car_warehouse.dir/main.cpp.o -o car_warehouse  /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.11.3 
