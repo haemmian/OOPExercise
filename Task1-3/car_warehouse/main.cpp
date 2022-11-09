@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    int RLCar = 1;
+
     //Initialization
     Warehouse Wh(10);
     //Race_car RC(10,6,60, 6, "blue", 200);   //Enter:    (Value , Capacity , power, number , colour, top speed)
