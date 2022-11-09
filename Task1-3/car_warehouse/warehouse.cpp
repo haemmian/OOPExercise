@@ -20,7 +20,6 @@ void Warehouse::parking()
 
 void Warehouse::leaving(int idxOUT)
 {
-
     if(cnt_Car>=1)
     {                                     //in case there are no cars in the building
         if(index[idxOUT] == 1)
@@ -34,7 +33,6 @@ void Warehouse::leaving(int idxOUT)
             std::cout<<"empty parkingslot!\n";
         }
     }
-
 }
 
 /**
@@ -57,10 +55,3 @@ int Warehouse::Capacity()
 {
     return capacity;
 }
-
-
-
-
-
-
-

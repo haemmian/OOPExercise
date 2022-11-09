@@ -36,11 +36,4 @@ public:
         //std::cout << "Top speed: " << top_speed << "km/h" << std::endl;
     }
 };
-
-
-
-
-
-
-
 #endif // CAR_H
