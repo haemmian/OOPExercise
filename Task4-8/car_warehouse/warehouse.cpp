@@ -5,8 +5,9 @@
  * @param car to park
  */
 // your method
-void Warehouse::parking(int idxIN){
-    index = idxIN;
+void Warehouse::parking()
+{
+    index[cnt_Car] = 1;
     cnt_Car++;
     std::cout << "\ncar is parked!" << std::endl;
 }
@@ -17,17 +18,23 @@ void Warehouse::parking(int idxIN){
  */
 // your method
 
-void Warehouse::leaving(int idxOUT){
+void Warehouse::leaving(int idxOUT)
+{
 
-    if(cnt_Car>=1){                                     //in case there are no cars in the building
-        if(idxOUT == 123){
-          std::cout<<"\nYou are able to use the car!\n";
+    if(cnt_Car>=1)
+    {                                     //in case there are no cars in the building
+        if(index[idxOUT] == 1)
+        {
+            std::cout<<"\nYou are able to use the car!\n";
+            index[idxOUT] = 0;
+            cnt_Car--;
         }
-        else{
-            std::cout<<"Wrong Index!\n";
-            }
+        else
+        {
+            std::cout<<"empty parkingslot!\n";
+        }
     }
-    cnt_Car--;
+
 }
 
 /**
@@ -35,8 +42,9 @@ void Warehouse::leaving(int idxOUT){
  * @return number of cars in the warehouse
  */
 // your method
-int Warehouse::numbCars(){
-   return cnt_Car;
+int Warehouse::numbCars()
+{
+    return cnt_Car;
 }
 
 /**
@@ -45,7 +53,8 @@ int Warehouse::numbCars(){
  */
 // your method
 
-int Warehouse::Capacity(){
+int Warehouse::Capacity()
+{
     return capacity;
 }
 

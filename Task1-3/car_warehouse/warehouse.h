@@ -2,16 +2,18 @@
 #define WAREHOUSE_H
 #include <iostream>
 
-class Warehouse{
+class Warehouse
+{
 private:
-    int capacity, index, cnt_Car = 0;
+    int capacity, index[10], cnt_Car = 0; //index refers to parking slot
 public:
-    Warehouse(int cp){
+    Warehouse(int cp)
+    {
         capacity = cp;
 
         //std::cout<<  "Warehouse\nCapacity: " << capacity << std::endl;
     }
-    void parking(int idxIN);
+    void parking();
     void leaving(int idxOUT);
     int numbCars();
     int Capacity();
