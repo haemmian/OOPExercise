@@ -5,11 +5,12 @@
 class Car{
 
 private:
-int value, capacity, power, number;
-std::string colour;
+    int value, capacity, power, number;
+    std::string colour;
 public:
-//Contructor-Function
-    Car(int vl, int cp,int pw, int numb, std::string clr){
+    //Contructor-Function
+    Car(int vl, int cp,int pw, int numb, std::string clr)
+    {
         value       = vl;
         capacity    = cp;
         power       = pw;
@@ -21,12 +22,14 @@ public:
     }
 };
 
-class Race_car:public Car{
+class Race_car:public Car
+{
 
 private:
     int top_speed;
 public:
-    Race_car(int vl, int cp,int pw, int numb, std::string clr, int topsp): Car(vl, cp, pw, numb, clr ){
+    Race_car(int vl, int cp,int pw, int numb, std::string clr, int topsp): Car(vl, cp, pw, numb, clr )
+    {
 
         top_speed = topsp;
 

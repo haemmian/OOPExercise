@@ -18,7 +18,7 @@ int main()
 
     //actions
     Wh.parking();
-    Wh.leaving(0);    //Enter Index
+    Wh.leaving(0);    //Enter Index / Parkingslot-Number
 
 
 
