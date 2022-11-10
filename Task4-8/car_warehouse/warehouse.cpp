@@ -1,16 +1,25 @@
 #include "warehouse.h"
+#include "bits/stdc++.h"
 
 /**
  * @brief parks a car in the warehouse
  * @param car to park
  */
 // your method
-void Warehouse::parking()
+void Warehouse::parking(Car car)
 {
-    index[cnt_Car] = 1;
+    index = cnt_Car;
+
+    Car_Number          = car.GetNumber();
+    number_car[cnt_Car] = car.GetNumber();
+
     cnt_Car++;
-    std::cout << "\ncar is parked!" << std::endl;
+
+
+    //std::cout << "\ncar N." << Car_Number << " is parked!" << std::endl;
 }
+
+
 /**
  * @brief gets the parked car at index
  * @param index of the parked car
@@ -18,23 +27,15 @@ void Warehouse::parking()
  */
 // your method
 
-void Warehouse::leaving(int idxOUT)
+void Warehouse::leaving(int Index_OUT)
 {
 
     if(cnt_Car>=1)
     {                                     //in case there are no cars in the building
-        if(index[idxOUT] == 1)
-        {
-            std::cout<<"\nYou are able to use the car!\n";
-            index[idxOUT] = 0;
-            cnt_Car--;
-        }
-        else
-        {
-            std::cout<<"empty parkingslot!\n";
-        }
-    }
+        std::cout<<"\nYou are able to use the car at parking slot N." << Index_OUT << "!\n";
 
+        cnt_Car--;
+    }
 }
 
 /**
@@ -58,9 +59,24 @@ int Warehouse::Capacity()
     return capacity;
 }
 
+int Warehouse::sort_number()
+{
+    int n = sizeof(number_car) / sizeof(number_car[0]);
 
+    std::sort(number_car, number_car + n);                  //Sort function
 
+    return n;
 
+}
+void Warehouse::return_Cars()
+{
+    int n = sort_number();
 
+    std::cout << "\ncarnumber in the warehouse: ";
 
-
+    for (int i = 0; i < n; ++i)
+        if(number_car[i] >=1)
+        {
+            std::cout << number_car[i] << " ";
+        }
+}
